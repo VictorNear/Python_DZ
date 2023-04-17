@@ -6,3 +6,19 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
+
+n = int(input())
+lst = []
+for i in range(n):
+   number = int(input())
+   lst.append(number)
+
+x = int(input())
+min = 10000
+
+for i in range(len(lst)):
+   new_min = abs(x - lst[i])
+   if new_min < min:
+      min = new_min
+      rez = lst[i]
+print(rez)
