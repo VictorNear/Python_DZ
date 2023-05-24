@@ -13,8 +13,12 @@
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
-def print_operation_table(operation, num_rows, num_columns):
-   op = lambda x, y: x * y
-num_rows = int(input())
-num_columns = int(input())
-print_operation_table(op(num_rows, num_columns), num_rows, num_columns)
+def print_operation_table(func, num_rows, num_columns):
+   for i in range(1, num_rows + 1):
+      for j in range(1, num_columns + 1):
+         print(func(i, j), end = "  ")
+      print()
+search = lambda x, y: x * y
+num_rows = int(input("Введите количество строк: "))
+num_columns = int(input("Введите количество столбцов: "))
+print_operation_table(search, num_rows, num_columns)
